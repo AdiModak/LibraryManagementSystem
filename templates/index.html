@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Book Entry</title>
+</head>
+
+<body>
+    <form method="post" action="/book">
+        {% csrf_token %}
+        <div>
+            <br>
+            <p>
+            <h3>Enter book details</h3>
+            </p>
+            <div>
+                <p>Book Id:</p>{{ form.book_id }}
+            </div>
+            <div>
+                <p>Book Name:</p>{{ form.book_name }}
+            </div>
+            <div>
+                <p>Book Author:</p>{{ form.book_author }}
+            </div>
+            <div>
+                <button type="submit">Submit</button>
+            </div>
+        </div>
+    </form>
+</body>
+
+</html>
